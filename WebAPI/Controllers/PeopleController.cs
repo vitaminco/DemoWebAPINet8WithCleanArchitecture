@@ -1,5 +1,5 @@
 ﻿
-using Application.Contracts;
+
 using Application.DTOs;
 using Application.Features.PeopleFeatures.Commands;
 using Application.Features.PeopleFeatures.Queries;
@@ -16,25 +16,25 @@ namespace WebAPI.Controllers
     public class PeopleController : ControllerBase
     {
         //Lấy dữ liệu từ Ipeople
-        private readonly IPeople people;
+        
         private readonly IMediator mediator;
 
-        public PeopleController(IPeople people, IMediator mediator)
+        public PeopleController( IMediator mediator)
         {
-            this.people = people;
+            
             this.mediator = mediator;
         }
 
         //Hiển thị dữ liệu
         [HttpGet("Data")]
-        public async Task<ActionResult<PeopleResponseListAll>> GetAllPeople() => Ok(await mediator.Send(new GetAllPeopleQuery()));
+        public async Task<ActionResult<PeopleResponse>> GetAllPeople() => Ok(await mediator.Send(new GetAllPeopleQuery()));
         /*        {
                     var result = await people.GetAllPeopleAsync();
                     return Ok(result);
                 }*/
         //Tìm data
         [HttpGet("{id}")]
-        public async Task<ActionResult<PeopleResponseList>> FindPeople(int id) 
+        public async Task<ActionResult<PeopleResponse>> FindPeople(int id) 
             => Ok(await mediator.Send(new GetPeopleByIdQuery{Id = id}));
        /* {
             var result = await people.GetFindPeopleAsync(id);
@@ -61,7 +61,7 @@ namespace WebAPI.Controllers
                 }*/
         //Xóa người
         [HttpDelete("{id}")]
-        public async Task<ActionResult<PeopleResponseList>> DeletePeople(int id)
+        public async Task<ActionResult<PeopleResponse>> DeletePeople(int id)
             => Ok(await mediator.Send(new DeletePeopleCommand { Id = id }));
        /* {
             //Gọi trong PeopleReponse để thêm người

@@ -13,7 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//sử dụng
+//sử dụng ServiceContainer
 builder.Services.InFrastrutureServics(builder.Configuration);
 //Sử dụng automapper
 builder.Services.AddAutoMapper(typeof(AutoMapperConfig));

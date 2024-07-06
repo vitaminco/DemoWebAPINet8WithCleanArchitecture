@@ -5,7 +5,7 @@ using Application.Features.PeopleFeatures.Commands;
 using AutoMapper;
 using Domain.Entities;
 using Infrastrure.Data;
-using Infrastrure.Repon;
+
 using MediatR;
 
 namespace Infrastrure.Handlers.PeopleHandler

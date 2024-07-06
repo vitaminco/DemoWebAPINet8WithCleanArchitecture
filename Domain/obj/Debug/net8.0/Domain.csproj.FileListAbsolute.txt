@@ -9,3 +9,4 @@ D:\ThucTap\DemoWebAPINet8WithCleanArchitecture\Domain\obj\Debug\net8.0\Domain.dl
 D:\ThucTap\DemoWebAPINet8WithCleanArchitecture\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\ThucTap\DemoWebAPINet8WithCleanArchitecture\Domain\obj\Debug\net8.0\Domain.pdb
 D:\ThucTap\DemoWebAPINet8WithCleanArchitecture\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\ThucTap\DemoWebAPINet8WithCleanArchitecture\Domain\obj\Debug\net8.0\Domain.sourcelink.json
